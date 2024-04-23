@@ -103,6 +103,7 @@ public class CompraPagoP2CController implements Initializable {
 	    	    } else {
 	    	    	// Mostrar mensaje de error si la respuesta no es exitosa
 	    	    	comun.mostrarVentanaInformacion("Error", true);
+	    	    	regresarMenuPrincipal(event);
 	    	    }
 	    	    // Cerrar la conexión
 	    	    connection.disconnect();

@@ -71,7 +71,6 @@ public class comun {
             }
             if (!bancoMap.isEmpty()) {
                 ObservableList<String> bancos = FXCollections.observableArrayList(bancoMap.values());
-                System.out.println(bancos);
                 boxBancoComercio.setItems(bancos);
             } else {
                 System.out.println("No se encontraron bancos en la sección '" + sectionTitle + "'.");

@@ -96,6 +96,7 @@ public class CompraTarjetaController implements Initializable {
 	            } else {
 	                // Mostrar mensaje de error si la respuesta no es exitosa
 	                comun.mostrarVentanaInformacion("Error", false);
+	                regresarMenuPrincipal(event);
 	            }
 
 	            // Cerrar la conexión
