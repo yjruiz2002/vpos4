@@ -182,7 +182,7 @@ public class comun {
 
         // Crear un ImageView para mostrar el GIF
         ImageView imageView = new ImageView();
-        Image gifImage = new Image("resources/img/Procesando.gif"); // Reemplaza "ruta_del_archivo.gif" con la ruta real de tu archivo GIF
+        Image gifImage = new Image("resources/img/Procesando.gif");
         imageView.setImage(gifImage);
 
         // Ajustar el tamaño del ImageView al tamaño de la ventana
@@ -202,17 +202,6 @@ public class comun {
         processingStage = (Stage) dialog.getDialogPane().getScene().getWindow();
         processingStage.setTitle("Procesando...");
         processingStage.initModality(Modality.APPLICATION_MODAL);
-
-        // Crear un AnimationTimer para reproducir el GIF
-        animationTimer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                // No se necesita código aquí, ya que el GIF se reproduce automáticamente
-            }
-        };
-
-        // Iniciar el AnimationTimer
-        animationTimer.start();
 
         // Mostrar el diálogo
         dialog.show();
