@@ -56,6 +56,9 @@ public class CompraPagoC2PController implements Initializable {
 		if(camposObligatoriosCompletados()) 
 		{
 			try {
+				Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+				currentStage.close();
+				comun.mostrarVentanaProcesando();
 				comun.disable(); // Desactiva el certificado
 	    	    URL url = new URL("https://localhost:443/vpos/compra/c2p");
 	    	    // Establecer la conexión HTTP

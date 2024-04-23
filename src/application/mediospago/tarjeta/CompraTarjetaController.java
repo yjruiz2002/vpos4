@@ -51,7 +51,9 @@ public class CompraTarjetaController implements Initializable {
 	    if (camposObligatoriosCompletados()) 
 	    {
 	        try {
-	        	comun.mostrarVentanaProcesando();
+	        	Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+				currentStage.close();
+				comun.mostrarVentanaProcesando();
 	            comun.disable(); // Desactiva el certificado
 	            URL url = new URL("https://localhost:443/vpos/compra/tarjeta");
 	            // Establecer la conexión HTTP

@@ -13,6 +13,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -41,6 +42,7 @@ public class comun {
 	
 	private static final Logger LOGGER = Logger.getLogger(Application.class.getName()); // Parámetro para establecer mensajes
 	private Stage processingStage; //Ventana de procesando
+	 private AnimationTimer animationTimer;
 	
 	//leer archivos de configuracion para formularios
 	public void leerArchivo (String filePath, String sectionTitle, ComboBox boxBancoComercio) {
@@ -174,34 +176,46 @@ public class comun {
 	
 	// Ventana para mostrar mensajes de error al usuario
 	public void mostrarVentanaProcesando() {
-	    // Crear un nuevo Dialog
-	    Dialog<Void> dialog = new Dialog<>();
-	    VBox content = new VBox();
+		// Crear un nuevo Dialog
+        Dialog<Void> dialog = new Dialog<>();
+        VBox content = new VBox();
 
-	    // Crear un ImageView para mostrar el GIF
-	    ImageView imageView = new ImageView();
-	    Image gifImage = new Image("resources/img/Procesando.gif"); // Reemplaza "ruta_del_archivo.gif" con la ruta real de tu archivo GIF
-	    imageView.setImage(gifImage);
+        // Crear un ImageView para mostrar el GIF
+        ImageView imageView = new ImageView();
+        Image gifImage = new Image("resources/img/Procesando.gif"); // Reemplaza "ruta_del_archivo.gif" con la ruta real de tu archivo GIF
+        imageView.setImage(gifImage);
 
-	    // Ajustar el tamaño del ImageView al tamaño de la ventana
-	    imageView.fitWidthProperty().bind(content.widthProperty());
-	    imageView.fitHeightProperty().bind(content.heightProperty());
+        // Ajustar el tamaño del ImageView al tamaño de la ventana
+        imageView.fitWidthProperty().bind(content.widthProperty());
+        imageView.fitHeightProperty().bind(content.heightProperty());
 
-	    // Agregar el ImageView al VBox
-	    content.getChildren().add(imageView);
+        // Agregar el ImageView al VBox
+        content.getChildren().add(imageView);
 
-	    // Crear la escena
-	    Scene scene = new Scene(content, 300, 250);
+        // Crear la escena
+        Scene scene = new Scene(content, 300, 250);
 
-	    // Configurar el estilo del VBox para centrar el ImageView
-	    content.setAlignment(Pos.CENTER);
+        // Configurar el estilo del VBox para centrar el ImageView
+        content.setAlignment(Pos.CENTER);
 
-	    // Configurar el título y la modalidad
-	    processingStage = (Stage) dialog.getDialogPane().getScene().getWindow();
-	    processingStage.initModality(Modality.APPLICATION_MODAL);
+        // Configurar el título y la modalidad
+        processingStage = (Stage) dialog.getDialogPane().getScene().getWindow();
+        processingStage.setTitle("Procesando...");
+        processingStage.initModality(Modality.APPLICATION_MODAL);
 
-	    // Mostrar el diálogo
-	    dialog.show();
-	    processingStage.setScene(scene);
+        // Crear un AnimationTimer para reproducir el GIF
+        animationTimer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                // No se necesita código aquí, ya que el GIF se reproduce automáticamente
+            }
+        };
+
+        // Iniciar el AnimationTimer
+        animationTimer.start();
+
+        // Mostrar el diálogo
+        dialog.show();
+        processingStage.setScene(scene);
 	}
 }
