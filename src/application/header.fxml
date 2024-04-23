@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="header" prefHeight="50.0" style="-fx-background-color: #336699;" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="headerLabel" text="This is the header" AnchorPane.topAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+</AnchorPane>
+

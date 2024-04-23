@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="446.0" style="-fx-background-color: #ffffff;" styleClass="stage-form-compra-p2c" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mediospago.P2C.CompraPagoP2CController">
+   <children>
+      <Pane prefHeight="399.0" prefWidth="78.0" styleClass="color-pane" />
+      <TextField fx:id="fieldMonto" layoutX="237.0" layoutY="111.0" prefHeight="26.0" prefWidth="165.0" />
+      <Label layoutX="212.0" layoutY="6.0" styleClass="color-text-title-formulario" text="Transacción P2C">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="33.0" text="Ingresa los datos">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="89.0" text="Moneda de pago">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="89.0" text="Monto">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="163.0" text="Banco del cliente ">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxMonedaPago" layoutX="118.0" layoutY="110.0" prefHeight="28.0" prefWidth="90.0" />
+      <ComboBox fx:id="boxBancoCliente" layoutX="118.0" layoutY="186.0" prefHeight="28.0" prefWidth="289.0" />
+      <TextField fx:id="fieldTelefonoCliente" layoutX="239.0" layoutY="263.0" prefHeight="26.0" prefWidth="165.0" />
+      <Label layoutX="120.0" layoutY="241.0" text="Teléfono del cliente">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="boxCodigoTelefonoCliente" layoutX="120.0" layoutY="262.0" prefHeight="28.0" prefWidth="90.0" />
+      <Separator layoutX="110.0" layoutY="68.0" prefHeight="8.0" prefWidth="316.0" />
+      <Button layoutX="118.0" layoutY="325.0" mnemonicParsing="false" onAction="#enviarDatosPeticionP2C" prefHeight="30.0" prefWidth="106.0" text="Aceptar">
+         <styleClass>
+            <String fx:value="estilo-boton-aceptar" />
+         </styleClass>
+      </Button>
+      <Button layoutX="318.0" layoutY="325.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" prefHeight="30.0" prefWidth="106.0" text="Cancelar">
+         <styleClass>
+            <String fx:value="estilo-boton-cancelar" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

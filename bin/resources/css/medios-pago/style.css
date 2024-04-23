@@ -1,0 +1,81 @@
+.root {
+    -color-base: #850202;
+    -color-text: #FFFFFF;
+    -color-text-titles: #850202
+}
+
+#btnCompra {
+    -fx-background-image: url('/resources/img/ComprasOfc.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+#btnPagoTarjeta {
+    -fx-background-image: url('/resources/img/MedioPagoTarjeta.jpg');
+	-fx-background-size: 100% 100%;
+}
+
+#btnPagoC2P {
+    -fx-background-image: url('/resources/img/PagoMovil.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+#btnPagoP2C {
+    -fx-background-image: url('/resources/img/PagoMovilP2C.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+.estilo-boton-aceptar {
+    -fx-background-color: -color-base;
+    -fx-text-fill: -color-text;
+}
+
+.estilo-boton-cancelar {
+    -fx-background-color: gray;
+}
+
+.color-pane {
+    -fx-background-color: -color-base;
+}
+
+.color-text-title-formulario {
+    -fx-text-fill: -color-text-titles;
+}
+
+.color-text-pane {
+    -fx-text-fill: -color-text;
+}
+
+.stage {
+    -fx-min-width: 400px;
+    -fx-min-height: 200px;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 200px;
+    -fx-content-display: top-left;
+}
+
+.stage-form-compra-p2c {
+    -fx-min-width: 446px;
+    -fx-min-height: 598px;
+    -fx-pref-width: 446px;
+    -fx-pref-height: 598px;
+}
+
+.stage-form-compra-c2p {
+    -fx-min-width: 446px;
+    -fx-min-height: 467px;
+    -fx-pref-width: 446px;
+    -fx-pref-height: 467px;
+}
+
+.cards {
+	-fx-min-width: 100px;
+    -fx-min-height: 80px;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 80px;
+	-fx-border-width: 2; 
+	-fx-border-color: black;
+	-fx-alignment: center;
+    -fx-content-display: center;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+}

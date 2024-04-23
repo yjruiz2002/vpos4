@@ -1,0 +1,89 @@
+.root {
+    -color-base: #028504; /* Color base usado de backgrounds */
+    -color-text: #FFFFFF;
+    -color-text-titles: #023685 /* Color base usado para los titulos principales */
+}
+
+/* Background */
+.color-pane {
+    -fx-background-color: -color-base;
+}
+
+/* Color de las letras de los títulos de los formularios */
+.color-text-title-formulario {
+    -fx-text-fill: -color-text-titles;
+}
+
+/* Etiquetas para la imagen y tamaño del boton principal que indica compra */
+#btnCompra { 
+    -fx-background-image: url('/resources/img/ComprasOfc.jpg'); 
+    -fx-background-size: 100% 100%;
+}
+
+/* Etiquetas para la imagen y tamaño del boton principal que indica compra con tarjeta */
+#btnPagoTarjeta {
+    -fx-background-image: url('/resources/img/MedioPagoTarjeta.jpg');
+	-fx-background-size: 100% 100%;
+}
+
+/* Etiquetas para la imagen y tamaño del boton principal que indica compra con C2P */
+#btnPagoC2P {
+    -fx-background-image: url('/resources/img/PagoMovil.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+/* Etiquetas para la imagen y tamaño del boton principal que indica compra con P2C */
+#btnPagoP2C {
+    -fx-background-image: url('/resources/img/PagoMovilP2C.jpg');
+    -fx-background-size: 100% 100%;
+}
+
+/* Etiquetas para la imagen y tamaño de los botones aceptar en los formularios */
+.estilo-boton-aceptar {
+    -fx-background-color: #023685;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Etiquetas para la imagen y tamaño de los botones cancelar en los formularios */
+.estilo-boton-cancelar {
+    -fx-background-color: gray;
+}
+
+/* Tamaño de las ventanas principales */
+.stage {
+    -fx-min-width: 400px;
+    -fx-min-height: 200px;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 200px;
+    -fx-content-display: top-left;
+}
+
+/* Tamaño de la ventana de compra p2c */
+.stage-form-compra-p2c {
+    -fx-min-width: 446px;
+    -fx-min-height: 393px;
+    -fx-pref-width: 446px;
+    -fx-pref-height: 393px;
+}
+
+/* Tamaño de la ventana de compra c2p */
+.stage-form-compra-c2p {
+    -fx-min-width: 446px;
+    -fx-min-height: 467px;
+    -fx-pref-width: 446px;
+    -fx-pref-height: 467px;
+}
+
+/* Etiquetas para los botones de las ventanas principales */
+.cards {
+	-fx-min-width: 100px;
+    -fx-min-height: 80px;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 80px;
+	-fx-border-width: 2; 
+	-fx-border-color: black;
+	-fx-alignment: center;
+    -fx-content-display: center;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+}

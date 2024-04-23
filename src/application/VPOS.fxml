@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VPOSController">
+   <children>
+      <Button fx:id="btnCompra" mnemonicParsing="false" onAction="#redirigirOpcionesCompra" styleClass="cards" />
+   </children>
+   <styleClass>
+      <String fx:value="color-pane" />
+      <String fx:value="stage" />
+   </styleClass>
+</AnchorPane>
